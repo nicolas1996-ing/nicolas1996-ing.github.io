@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://kit.fontawesome.com/b55c5ab8d2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="../assets/logo-desktop.svg" alt="logo" class='img-header'></a>
+
+        <div id="search-header" class="search-header">
+            <input type="text" placeholder="Busca GIFOS y más" class="input-search"> 
+            <img src="./assets/icon-search.svg" alt="icon-search" id="buscar">
+            <!-- config buscador -->
+        </div>
+
+        <nav>
+            <div class="menu">
+                <input type="checkbox" id="checkbox" class="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="list-menu">
+                    
+                    <li><a class='let-mod-noc txtLi' id="mod-noc" href="#">Modo Nocturno</a></li>
+                    <li><a class='let-mod-noc txtLi' href="./components/favoritos.html">Favoritos</a></li>
+                    <li><a class='let-mod-noc txtLi' href="./components/misGifos.html">Mis GIFOS</a></li>
+
+                    <!--Para modo mobile ocultar este 'li'-->
+                    <li><a id='btnHeader' class='let-mod-noc' href="./components/crearGifos.html"><img
+                                src="./assets/button-crear-gifo.svg" alt="btn-mas" class="img-list"
+                                id='btn-img-header'></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="main-1-main" id="main-1">
+            <h1 class="main1-title-index" id="main1-title">Inspírate, busca, guarda, y crea los mejores
+                <span>GIFOS</span>
+            </h1>
+            <img class="image-intro" src="/assets/ilustra_header.svg" alt="GIFOS_INTRO">
+
+                <div class="search">
+                <div class='linea-1-busc'>
+                    <div class='search-input' id='search-input'>
+                        <img id="img-search-izq" src="./assets/icon-search-mod-noc.svg" alt="icon-search">
+                        <input id='buscador' type="text" placeholder="Busca GIFOS y más" class="input-search">
+                    </div>
+                    <img src="./assets/icon-search.svg" alt="icon-search" id="icono-buscar" class="buscar">
+                </div>
+                <hr class='hr'>
+            </div>
+
+            <div class="trending let-mod-noc" id='trending-index'>
+                <h3>Trending:</h3>
+                <p class="reactions let-mod-noc">Reactions, Entertainment, Sports, Stickers, Artists</p>
+            </div>
+
+            <!-- inicio 03-Busqueda -->
+            <div class="line" id="line"></div>
+            <h1 class="title let-mod-noc" id="title">Mascotas</h1>
+            <div class="grilla-gifs" id='grilla-gifs'>
+                <!-- 12 imagenes de los gif favoritos 
+                     <div class = "gif-fav">
+                        ejemplo
+                        <img class="img-gif cat gif-fav" src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" alt="cat">
+
+                    </div>
+                    <div class = "gif-fav"></div>
+                    <div class = "gif-fav"></div>
+                    <div class = "gif-fav"></div>
+                    <div class = "gif-fav"></div>
+                    <div class = "gif-fav"></div>
+                    <div class = "gif-fav"></div>
+                    <div class = "gif-fav"></div>
+                    <div class = "gif-fav"></div>
+                    <div class = "gif-fav"></div>
+                    <div class = "gif-fav"></div>
+                    <div class = "gif-fav"></div> -->
+            </div>
+
+            <button class="see_more_bus" id="see_more">VER MÁS</button>
+            <!-- fin 03-Busqueda -->
+
+            <!-- inicio Busqueda sin resultado -->
+
+            <!-- <div class = "busque-sin-resul">
+                <div class = "line line-main"></div> 
+                <h1 class = "titulo-no-resul">Lorem ipsum</h1>
+                <img src="./assets/icon-busqueda-sin-resultado.svg" alt="logo-no-resul">
+                <h1 class = "intenta-otra-busq">intenta con otra búsqueda</h1>
+            </div> -->
+            
+            <!-- fin Busqueda sin resultado -->
+
+        </section>
+
+        <!--  anexo 16-06-2021   -->
+        <section class = "expandir expandir-gifos">
+            <img src="./assets/close.svg" alt="icon-search" id="icono-cerrar-eg" class="cerrar icon icon-close">
+            <div class="carrusel">
+                <img class="flecha-izq" id="btn-slider-left-eg" src="../assets/button-slider-left.svg" alt="fle-izq">
+                <div class="tendencias-eg">
+                    <img class="img-expan-gifo-eg img-gif-2" id = "img-eg" src="#" alt="GIF">
+                </div>
+                <img id="btn-slider-right-eg" class="flecha-der" src="../assets/button-slider-right.svg" alt="fle-der">
+            </div>
+            <div class = "expandir-footer">
+                <div class = 'expandir-titulos text-gif'>
+                    <p class = "user-eg" id="user-mobile">User</p>
+                    <p class = "titulo-eg title-expandir" id="title-mobile"><b>Titulo</b> </p>
+                </div>
+                <div class = 'expandir-iconos'>
+                    <div class ="eg-img1">
+                        <img src="/assets/icon-fav.svg" alt="expandir-gifo-fav" class ="eg-fav" id="favoritos-ex">
+                    </div>
+                    <img src="/assets/icon-download.svg" alt="expandir-gifo-dow" class = "eg-img2" id="download-ex">
+                </div>
+            </div>
+        </section>  
+        <!-- fin anexo 16-06-2021 --> 
+
+
+        <section class="trending-gifos main-2-main">
+            <h2 class="title let-mod-noc">Trending GIFOS</h2>
+            <p class="subtitle let-mod-noc">Mira los últimos GIFOS de nuestra comunidad</p>
+            <div class="carrusel">
+                <img class="flecha flecha-izq" id="btn-slider-left" src="../assets/button-slider-left.svg" alt="fle-izq">
+                <div class="tendencias">
+                    <!-- <img class="img-gif cat" src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" alt="cat">
+                    <img class="img-gif song" src="https://media.giphy.com/media/blSTtZehjAZ8I/giphy.gif" alt="song">
+                    <img class="img-gif women" src="https://media.giphy.com/media/QuaJZyVAMwLdbvE4c6/giphy.gif" alt="women"> -->
+                </div>
+                <img id="btn-slider-right" class="flecha flecha-der" src="../assets/button-slider-right.svg" alt="fle-der">
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="redes">
+            <p class=" let-footer">Compartir en : </p>
+
+            <a href="https://www.facebook.com/" target="_blank">
+                <img id="icon-face" class="icon-foo-face" src="./assets/icon_facebook.svg" alt="icon-facebook">
+            </a>
+
+            <a href="https://www.instagram.com/?hl=es-la" target="_blank">
+                <img id="icon-twi" class="icon-foo-twi" src="./assets/icon-twitter.svg" alt="icon-twitter">
+
+            </a>
+
+            <a href="https://twitter.com/?lang=es" target="_blank">
+                <img id="icon-inst" class="icon-foo-inst" src="./assets/icon_instagram.svg" alt="icon-instagram">
+            </a>
+
+        </div>
+        <div class="copyRight let-footer">© GIFOS 2020 All Rights Reserved.</div>
+    </footer>
+    <script src="./src/app.js"></script>
+    <!-- <script src = "./components/modoNocturno.js"></script> -->
+</body>
+
+</html>

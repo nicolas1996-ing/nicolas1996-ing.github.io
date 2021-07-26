@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crearGifos</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../assets/logo-desktop.svg" alt="logo" class = "img-header"></a>
+           <nav>
+                <div class="menu">
+                    <input type="checkbox" id="checkbox" class="checkbox" >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul class = "list-menu">
+                        
+                        <li><a class = 'let-mod-noc' id = "mod-noc" href="#">MODO NOCTURNO</a></li>                    
+                        <li><a class = 'let-mod-noc' href="./favoritos.html">FAVORITOS</a></li>
+                        <li><a class = 'let-mod-noc' href="./misGifos.html">MIS GIFOS</a></li>
+
+                        <!--Para modo mobile ocultar este 'li'-->
+                        <li><a id = 'btnHeader' class = 'let-mod-noc' href="crearGifos.html"><img src="../assets/button-crear-gifo.svg" alt="btn-mas" class = "img-list"></a></li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="crear-gifos">
+            <!-- error -->
+            <!-- <div class = "esquina-superior"></div> -->
+            <!-- fin error -->
+            
+            <div class = "cuadro-principal">
+                <img class = "img-camara" id = "img-camara" src = "../assets/camara.svg" alt="camara-dere">
+                <img class = "img-luz-camara" id = "img-luz-camara" src = "../assets/element-luz-camara.svg" alt = "luz-camara">
+                <div class="cuadro-busqueda" id = "cuadro-busqueda">
+                    <h1 class="text-1 menu-1">Aquí podrás</h1>
+                    <h1 class="text-1 menu-1">crear tus propios <span>GIFOS</span></h1>
+                    <h1 class="text-2 menu-1">¡Crea tu GIFO en sólo 3 pasos!</h1>
+                    <h1 class="text-2 menu-1">(sólo necesitas una cámara para grabar un video)</h1>
+                     
+                    <!-- 10-Crear-Gifo-2 -->
+                    <!-- <h1 class="text-1 menu-2">¿Nos das acceso</h1>
+                    <h1 class="text-1 menu-2"> a tu cámara?</h1>
+                    <h1 class="text-2 menu-2">El acceso a tu cámara será válido sólo</h1>
+                    <h1 class="text-2 menu-2">por el tiempo en el que estés creando el GIFO</h1> -->
+
+
+                </div>
+            </div>
+
+            <!-- error -->
+            <!-- <div class = "esquina-inferior">
+                <img src="" alt="esquina-3">
+                <img src="" alt="esquina-4">
+            </div> -->
+            <!-- fin error -->
+
+        </section>
+
+        <section class="conteo-gifos">
+            <h2 style = "display: none;">identificador</h2>
+            <div class = 'conteo'>
+                <div class = "botones">
+                    <button id = "btn-conteo-1" class = "btn-conteo">1</button>
+                    <button id = "btn-conteo-2" class = "btn-conteo">2</button>
+                    <button id = "btn-conteo-3" class = "btn-conteo">3</button>
+                </div>
+                <div class = "divTiempoGif"> <p class = 'tiempoGIf' id = 'tiempoGif'>00:00:00</p> </div>
+                <img class = "img-pelicula" id = 'img-pelicula' src="../assets/pelicula.svg" alt="pelicula">
+            </div>
+            <div class = "line-conteo-gifos" id = "line-conteo-gifos"></div>
+            <div class="btns-crear-gifs">
+                <button id = "btn-comenzar" class = "btn-line-conteo-gifos">Comenzar</button>
+                <button id = "btn-start" class = "btn-line-conteo-gifos">Grabar</button>
+                <button id = "btn-stop" class = "btn-line-conteo-gifos">Finalizar</button>
+                <button id = "btn-subir-gif" class = "btn-line-conteo-gifos">Subir GIFO</button>
+                
+            </div>
+        </section>
+
+        <!-- <section class="iniciar-gifo">
+            <div class="linea-divisora">
+
+            </div>
+
+            <img id = "img-gif" src="#" alt="img-gif">
+        </section> -->
+        
+    </main>
+
+    <!-- <a href="#" id = "repetirGif">Hola mundo</a> -->
+
+
+    <footer>
+        <div class="redes">
+            <p class = "let-mod-noc">Compartir en : </p>
+    
+            <a href="https://www.facebook.com/" target="_blank">
+                <img id = "icon-face" class = "icon-foo-face" src="../assets/icon_facebook.svg" alt="icon-facebook">
+            </a>
+
+            <a href="https://www.instagram.com/?hl=es-la" target="_blank">
+                <img id = "icon-twi" class = "icon-foo-twi" src="../assets/icon-twitter.svg" alt="icon-twitter">
+
+            </a>
+            
+            <a href="https://twitter.com/?lang=es" target="_blank">
+                <img id = "icon-inst" class = "icon-foo-inst" src="../assets/icon_instagram.svg" alt="icon-instagram">
+            </a>
+
+        </div>
+        <div class="copyRight let-mod-noc">© GIFOS 2020 All Rights Reserved.</div>
+    </footer>
+    <script src="/src/app.js"></script>
+    <script src = "/src/crearGifos.js"></script>
+    <!-- <script src = "./modoNocturno.js"></script> -->
+
+</body>
+</html>

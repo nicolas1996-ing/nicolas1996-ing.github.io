@@ -1,0 +1,435 @@
+// example functions 
+@mixin styles(){
+    background-color: rgb(123,34,11);
+    font-size: 2vw;
+}
+
+// estilos mobile
+@mixin title-mobile {
+    font-family: 'Montserrat', sans-serif;
+    color: #572EE5;
+    text-align: center;
+    font-size: 25px;
+}
+
+@mixin p-mobile {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+@mixin bottom-see-more {
+    border: 1px solid #572EE5;
+    border-radius: 25px;
+    @include montserrat-bold-desk;
+    line-height: 16px;
+    padding: 18px 31.5px 16px 32.5px;
+    margin-bottom: 33px;
+    background-color: white;
+    
+    &:hover{
+        background: #572EE5;
+        color: white;
+    }
+}
+
+@mixin modoNocturnoMobile {
+    html{
+
+        .body-dark{
+            background: #37383C;
+            border-top: 2px solid black;
+    
+    
+            header{
+                background: #37383C;
+    
+                .menu{
+                    color: white;
+    
+                    ul {
+                        opacity: 1;
+                        
+                        li a{
+                            color: white;
+                            background-color: #37383C;
+                        }
+                        .linea{
+                            background-color: #37383C;
+                        }
+                    }
+    
+                    span {
+                        background: white;
+                    }
+                }
+            }
+    
+            .main-1-main{
+                h1{
+                    color: white;
+                    span {
+                        color: #5ED7C6;
+                    }
+                }
+                .search{
+                    border: 1px solid white;
+                    background-color: #37383C;
+                    input{
+                        background-color: $primary-background-nocturno;
+                        color: white;
+                    }
+        
+                    button{
+                        background: #37383C;
+                        background-image: url(/assets/icon-search-modo-noct.svg);
+                        
+                        &:hover{
+                            background-image: url(/assets/Button-close-hover-modo-noc.svg);
+                        }
+                    }    
+                }
+    
+                .trending, .reactions{
+                    color: white;
+                }
+    
+                .see_more {
+                    color: white;
+                    background-color: #37383C;
+                    border: 1px solid white;
+    
+                    &:hover {
+                        background: white;
+                        color: black;
+                    }
+                }
+            }
+    
+            .trending-gifos{
+                background-color: #222326;
+    
+                h2, p{
+                    color: white;
+                }
+    
+                .flecha{
+                    background-color: #222326;
+                }
+            }
+
+            .expandir-gifos{
+                background-color: #37383C;
+            }
+            
+            .intro_2{
+                .see_more{
+                    margin-top: 65.5px;
+                    border: 1px white solid;
+                    background-color: #37383C;
+                    color: white;
+    
+                    &:hover {
+                        color: black;
+                        background-color: white;
+                    }
+                }
+            }
+    
+            footer p, .copyRight{
+                color: white;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 580px){
+        html{
+    
+            .body-dark{
+                color: white;
+                background: $primary-background-nocturno;
+                
+    
+                header{
+                    background: #37383C;
+        
+                    .menu{
+        
+                        ul {
+                            background-color: black;
+                            opacity: 1;
+    
+                            li a{
+                                background-color: black;
+                            }
+        
+                            .linea{
+                            background-color: black;
+                            }
+                        }
+                    }
+                }
+    
+                .search{
+                    background: #37383C;
+                    border: 1px solid #572EE5;
+                    border-radius: 27px;
+                    // margin: -2px auto;
+                    margin: -0.3% auto;
+                    // margin-bottom: 73px;
+                    }
+                
+                main .trending-gifos .subtitle{
+                    color: white;
+                }
+            }
+                
+        }
+    }
+}
+
+@mixin estilosMobile {
+    body {
+        .gif{
+            .img-gif{
+                margin-left: 22px;
+                flex: 0 0 100%;
+                width: 260px;
+            }
+
+            .gif-hover{
+                background: #572EE5;
+                opacity: 0;
+                // opacity: 1;
+                position: relative;
+                top: -195px;
+                left: 22px;
+                height: 187px;
+                width: 260px;
+
+                .text-gif{
+                    color: white;
+                    font-family: Roboto;
+                    text-align: left;
+
+                    .user{
+                        line-height: 18px;
+                        font-size: 15px;
+                        font-weight: normal;
+                    }
+
+                    .title-GIFO{
+                        line-height: 19px;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                }
+
+                .icon-gif{
+                    display: flex;
+                    flex-flow: row wrap;
+                    color: #572EE5;
+                    flex: row wrap;
+                    justify-content: flex-end;
+                    padding-top: 10px;
+            
+                    .icon{
+                        height: 32px;
+                        width: 32px;
+                        border-radius: 6px;
+                        background: white;
+                        opacity: 0.7;
+                        margin-right: 10px;
+                        
+                    }
+
+                    .far, .fas{
+                        padding: 8px 7px;
+                        font-size: 16px;
+                        line-height: 18px;
+                        cursor: pointer;
+                    }
+                }
+
+                &:hover{
+                    transition: 1s;
+                    opacity: 0.7;
+                }
+            }
+    }
+}
+}
+
+
+// estilos desktop 
+@mixin montserrat-bold-desk {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+@mixin  montserrat-medium-desk {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #572EE5;
+    text-align: center;
+    line-height: 25px;
+    font-weight: 500;    
+}
+
+@mixin  roboto-regular-desk {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #9CAFC3;
+    text-align: left;
+    font-weight: 400;
+}
+
+@mixin roboto-footer-desk {    
+    font-family: 'Roboto', sans-serif; 
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+@mixin grillaGif {
+    .grilla-gifs,.grilla-gifs-misGifos {
+        margin: 0 7%;
+        margin-top: 2%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+  
+        .gif {
+          width: 260px;
+          height: 200px;
+          margin-left: 2%;
+          padding: 0;
+          margin-bottom: 3%;
+          cursor: pointer;
+          // border: 1px solid black;
+  
+          .img-gif {
+            // margin-left: 22px;
+            // flex: 0 0 100%;
+            width: 260px;
+            height: 200px;
+          }
+  
+          .gif-hover {
+            background: #572ee5;
+            opacity: 0;
+            position: relative;
+            bottom: 204px;
+            width: 100%;
+            height: 100%;
+  
+            .text-gif {
+              display: flex;
+              flex-flow: column;
+              position: relative;
+              top: 90px;
+              // margin-top: 20px;
+              // margin-left: 13px;
+              .user {
+                @include roboto-regular-desk;
+                font-weight: 700;
+                line-height: 15px;
+                font-size: 15px;
+                color: #ffffff 100%;
+                text-align: justify;
+                padding-left: 10px;
+                padding-right: 10px;
+                word-wrap: break-word; // evita el desbordamiento del texto
+                // padding-top: 90px;
+              }
+  
+              .title-GIFO {
+                @include roboto-regular-desk;
+                font-weight: 700;
+                color: #ffffff 100%;
+                line-height: 19px;
+                font-size: 16px;
+                text-align: justify;
+                padding-left: 10px;
+                padding-right: 10px;
+                word-wrap: break-word;
+                // padding: 0px 14px 6px 12px;
+              }
+            }
+  
+            .icon-gif {
+              display: flex;
+              flex-flow: row wrap;
+              color: #572ee5;
+              flex: row wrap;
+              justify-content: flex-end;
+              padding-top: 10px;
+  
+              .icon {
+                height: 32px;
+                width: 32px;
+                border-radius: 6px;
+                background: white;
+                opacity: 0.7;
+                margin-right: 10px;
+  
+                &:hover {
+                  background-color: white;
+                  opacity: 1;
+                  cursor: pointer;
+                }
+              }
+  
+              .far,
+              .fas {
+                padding: 8px 7px;
+                font-size: 16px;
+                line-height: 18px;
+                cursor: pointer;
+              }
+              .far:hover,
+              .fas:hover {
+                background-color: white;
+                opacity: 1;
+              }
+            }
+  
+            &:hover {
+              transition: 1s;
+              opacity: 0.7;
+            }
+          }
+          .gif-hover-fav {
+            background: #572ee5;
+            opacity: 0;
+            position: relative;
+            bottom: 214px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .see_more {
+        border: 1px solid #572ee5;
+        border-radius: 25px;
+        width: 127px;
+        height: 50px;
+        background: none;
+        margin-left: 45.6%;
+        margin-top: 4.2%;
+        margin-bottom: -1.2%;
+        cursor: pointer;
+        display: none;
+  
+        @include montserrat-bold-desk;
+      }
+      .see_more:hover {
+        background-color: #572ee5;
+        color: white;
+      }
+}
